@@ -62,13 +62,86 @@ void SetZeroes(vector<vector<int>>& matrix) {
     }
 }
 
+// 方法2，用每行和每列的首位标记此行或此列是否需要修改
+void SetZeroesFast(vector<vector<int>>& matrix) {
+    int rows = matrix.size();
+    if (0 == rows) {
+        return;
+    }
+
+    int cols = matrix[0].size();
+
+    bool first_col_marked = false;
+    bool first_row_marked = false;
+    // 第一行
+    for (int i = 0; i < cols; ++i) {
+        if (0 == matrix[0][i]) {
+            first_col_marked = true;
+            break;
+        }
+    }
+
+    // 第一列
+    for (int i = 0; i < rows; ++i) {
+        if (0 == matrix[i][0]) {
+            first_row_marked = true;
+            break;
+        }
+    }
+
+    // 从第二行第二列开始遍历，如果数为0，则其对应的行首、列首被置为0
+    for (int i = 1; i < rows; ++i) {
+        for (int j = 1; j < cols; ++j) {
+            if (0 == matrix[i][j]) {
+                matrix[0][j] = 0;
+                matrix[i][0] = 0;
+            }
+        }
+    }
+
+    // 检查第一行，为0，则更新整列（注意是从第一行第二列开始的）
+    for (int i = 1; i < cols; ++i) {
+        if (0 == matrix[0][i]) {
+            for (int j = 0; j < rows; ++j) {
+                matrix[j][i] = 0;
+            }
+        }
+    }
+
+    // 检查第一列，为0，则更新整行（注意是从第一列第二行开始的，不然第一行可能在上一步已经被全部置为0，导致这一步会把整个数组置为0）
+    for (int i = 1; i < rows; ++i) {
+        if (0 == matrix[i][0]) {
+            for (int j = 0; j < cols; ++j) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+    // 因为找为0的元素的遍历是从第二行第二列开始的，因此要对第一行，第一列中是否有0的数据进行处理
+    // 就matrix[0][0]这个数是否被标记了，即, matrix[0][0]这个数是否为0；
+    // 如果是第一行或第一列的其他位置为0，即便没有标记first_col_marked或first_row_marked,
+    // 上两步就都能将其对应的行和列处理过了
+    if (first_col_marked) {
+        for (int i = 0; i < cols; ++i) {
+            matrix[0][i] = 0;
+        }
+    }
+
+    if (first_row_marked) {
+        for (int i = 0; i < rows; ++i) {
+            matrix[i][0] = 0;
+        }
+    }
+}
+
 int main(int argc, char* argv[]) {
-    vector<vector<int>> all_nums{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    // {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    vector<vector<int>> all_nums{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
 
     Utils<int> util;
     util.PrintVector2D(all_nums);
 
-    SetZeroes(all_nums);
+    SetZeroesFast(all_nums);
 
     util.PrintVector2D(all_nums);
 
