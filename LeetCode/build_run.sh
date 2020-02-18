@@ -6,7 +6,7 @@ then
     exit 0
 fi
 
-g++ $filename -std=c++11 -I./../
+g++ $filename -std=c++11 -I./
 
 if [ ! -f "a.out" ];
 then
