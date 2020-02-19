@@ -48,6 +48,7 @@ class Solution {
                 tmp_num_vec.emplace_back(nums[i]);
                 used_[i] = true;
                 CombinateNum(nums, index + 1, tmp_num_vec);
+                // 这里因为选样时是互斥的，一定要退出，区别于P17
                 tmp_num_vec.pop_back();
                 used_[i] = false;
             }

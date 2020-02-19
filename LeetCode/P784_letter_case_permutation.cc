@@ -36,29 +36,23 @@ class Solution {
     }
 
    private:
-    void FindSubPermutation(string src_str, int index, string& tmp_string) {
+    void FindSubPermutation(string src_str, int index,
+                            const string& tmp_string) {
         if (index >= src_str.size()) {
             res_.emplace_back(tmp_string);
+            return;
         }
 
-        char c = src_str[index];
-        if (IsLetter(c)) {
-            // 0-->same letter, 1-->change letter
-            for (int i = 0; i < 2; ++i) {
-                // if (0 == i) {
-                //     tmp_string += src_str[i];
-                //     FindSubPermutation(src_str, index + 1, tmp_string);
-                // }
-                if (1 == i) {
-                    ChangeLetter(src_str[i]);
-                }
-                tmp_string += src_str[i];
-                FindSubPermutation(src_str, index + 1, tmp_string);
-            }
-        } else {
-            tmp_string += src_str[index];
-            FindSubPermutation(src_str, index + 1, tmp_string);
+        // 不能在这里修改tmp_string, 否则下面的递归会受影响
+        FindSubPermutation(src_str, index + 1, tmp_string + src_str[index]);
+
+        // 这里只有是字母的时候才会走下去
+        if (IsLetter(src_str[index])) {
+            char chg_c = ChangeLetter(src_str[index]);
+            FindSubPermutation(src_str, index + 1, tmp_string + chg_c);
         }
+
+        return;
     }
 
     bool IsLetter(char c) {
@@ -69,14 +63,17 @@ class Solution {
         }
     }
 
-    void ChangeLetter(char& c) {
+    char ChangeLetter(char c) {
+        if (!IsLetter(c)) {
+            return c;
+        }
         if (c >= 'a' && c <= 'z') {
-            c -= '32';
+            return char(toupper(c));
         }
         if (c >= 'A' && c <= 'Z') {
-            c += '32';
+            return char(tolower(c));
         }
-        return;
+        return c;
     }
     vector<string> res_;
 };
