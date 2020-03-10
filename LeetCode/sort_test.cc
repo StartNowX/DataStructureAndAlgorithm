@@ -40,12 +40,20 @@ int main(int argc, const char** argv) {
         util_int.PrintVector(input);
     }
 
-    if (true) {
+    if (false) {
         std::cout << "Quick Sort..." << std::endl;
         util_int.PrintVector(input);
         sort.QuickSort(input);
         util_int.PrintVector(input);
     }
+
+    if (true) {
+        std::cout << "Merge Sort..." << std::endl;
+        util_int.PrintVector(input);
+        sort.MergeSort(input);
+        util_int.PrintVector(input);
+    }
+
 
     return 0;
 }

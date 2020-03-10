@@ -38,6 +38,12 @@ class Sorts {
     void QuickSort(std::vector<int>& data);
 
 
+    /**
+     * 归并排序，
+     * 稳定排序
+     */
+    void MergeSort(std::vector<int>& data);
+
    private:
     inline void SwapTwoNums(int& a, int& b) {
         int tmp = b;
@@ -47,6 +53,9 @@ class Sorts {
 
     int Partition(std::vector<int>& data, int low, int high);
     void Qsort(std::vector<int>& data, int low, int high);
+
+    void MSort(std::vector<int>& data, int low, int high);
+    void Merge(std::vector<int>& data, int low, int mid, int high);
 };
 
 #endif

@@ -147,3 +147,59 @@ void Sorts::Qsort(std::vector<int>& data, int low, int high) {
         Qsort(data, privot_loc + 1, high);
     }
 }
+
+
+void Sorts::MergeSort(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    int len = data.size();
+    MSort(data, 0, len - 1);
+
+    return;
+}
+
+
+void Sorts::MSort(std::vector<int>& data, int low, int high) {
+    if (low < high) {
+        int mid = (low + high) / 2;
+
+        MSort(data, low, mid);
+        MSort(data, mid + 1, high);
+
+        Merge(data, low, mid, high);
+    }
+}
+
+void Sorts::Merge(std::vector<int>& data, int low, int mid, int high) {
+    int i, j, k;
+    int num_l = mid - low + 1;
+    int num_r = high - mid;
+
+    // 拆分成左右两个子模块
+    std::vector<int> data_l;
+    std::vector<int> data_r;
+    for (i = 0; i < num_l; ++i) {
+        data_l.emplace_back(data[low + i]);
+    }
+
+    for (j = 0; j < num_r; ++j) {
+        data_r.emplace_back(data[mid + j + 1]);
+    }
+
+    // 比较左边数组
+    i = j = 0;
+    k = low;
+    while (i < num_l && j < num_r) {
+        if (data_l[i] <= data_r[j]) {
+            data[k++] = data_l[i++];
+        } else {
+            data[k++] = data_r[j++];
+        }
+    }
+
+    // 将剩余元素归并
+    while (i < num_l) data[k++] = data_l[i++];
+    while (j < num_r) data[k++] = data_r[j++];
+}
