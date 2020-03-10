@@ -6,12 +6,6 @@
 class Sorts {
    public:
     /**
-     * 稳定排序，
-     * 时间复杂度：最好O(n), 最坏O(n^2)
-     */
-    void BubbleSort(std::vector<int>& data);
-
-    /**
      * 稳定排序
      * 时间复杂度：正序时，最好O(n)，逆序时，最坏O(n^2)
      * */
@@ -30,12 +24,29 @@ class Sorts {
      */
     void ShellSort(std::vector<int>& data);
 
+    /**
+     * 稳定排序，
+     * 时间复杂度：最好O(n), 最坏O(n^2)
+     */
+    void BubbleSort(std::vector<int>& data);
+
+    /**
+     * 快速排序，和冒泡排序一样，都是通过交换元素实现的
+     * 不稳定排序（中轴和元素交换时，可能会导致元素的顺序发生变化）
+     * 时间复杂度：O(nlogn)，最慢O(n^2), 最快O(n)
+     */
+    void QuickSort(std::vector<int>& data);
+
+
    private:
     inline void SwapTwoNums(int& a, int& b) {
         int tmp = b;
         b = a;
         a = tmp;
     }
+
+    int Partition(std::vector<int>& data, int low, int high);
+    void Qsort(std::vector<int>& data, int low, int high);
 };
 
 #endif

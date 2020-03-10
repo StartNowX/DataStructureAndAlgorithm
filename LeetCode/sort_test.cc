@@ -10,15 +10,7 @@ int main(int argc, const char** argv) {
     vector<int> input{8, 3, 2, 9, 0, 10, 3, 5};
 
     Utils<int> util_int;
-
-
     Sorts sort;
-    if (false) {
-        std::cout << "Bubble Sort..." << std::endl;
-        util_int.PrintVector(input);
-        sort.BubbleSort(input);
-        util_int.PrintVector(input);
-    }
 
     if (false) {
         std::cout << "Insert Sort..." << std::endl;
@@ -27,7 +19,7 @@ int main(int argc, const char** argv) {
         util_int.PrintVector(input);
     }
 
-    if (true) {
+    if (false) {
         std::cout << "Binary insert Sort..." << std::endl;
         util_int.PrintVector(input);
         sort.BinaryInsertSort(input);
@@ -41,6 +33,19 @@ int main(int argc, const char** argv) {
         util_int.PrintVector(input);
     }
 
+    if (false) {
+        std::cout << "Bubble Sort..." << std::endl;
+        util_int.PrintVector(input);
+        sort.BubbleSort(input);
+        util_int.PrintVector(input);
+    }
+
+    if (true) {
+        std::cout << "Quick Sort..." << std::endl;
+        util_int.PrintVector(input);
+        sort.QuickSort(input);
+        util_int.PrintVector(input);
+    }
 
     return 0;
 }

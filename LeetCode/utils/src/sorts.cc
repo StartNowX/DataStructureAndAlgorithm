@@ -2,25 +2,6 @@
 #include <iostream>
 #include <vector>
 
-void Sorts::BubbleSort(std::vector<int>& data) {
-    if (0 == data.size()) {
-        return;
-    }
-
-    int len = data.size();
-    for (int i = 0; i < len - 1; ++i) {
-        // j是从头开始便利，因为对每一轮i，只是将相邻两个元素比较大小并互换了
-        for (int j = 0; j < len - 1 - i; ++j) {
-            if (data[j] > data[j + 1]) {
-                SwapTwoNums(data[j], data[j + 1]);
-            }
-        }
-    }
-
-    return;
-}
-
-
 void Sorts::InsertSort(std::vector<int>& data) {
     if (0 == data.size()) {
         return;
@@ -113,4 +94,56 @@ void Sorts::ShellSort(std::vector<int>& data) {
     // }
 
     return;
+}
+
+void Sorts::BubbleSort(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    int len = data.size();
+    for (int i = 0; i < len - 1; ++i) {
+        // j是从头开始便利，因为对每一轮i，只是将相邻两个元素比较大小并互换了
+        for (int j = 0; j < len - 1 - i; ++j) {
+            if (data[j] > data[j + 1]) {
+                SwapTwoNums(data[j], data[j + 1]);
+            }
+        }
+    }
+
+    return;
+}
+
+void Sorts::QuickSort(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    Qsort(data, 0, data.size() - 1);
+}
+
+int Sorts::Partition(std::vector<int>& data, int low, int high) {
+    if (0 == data.size()) {
+        return 0;
+    }
+
+    int privo_key = data[low];
+
+    while (low < high) {
+        while (low < high && data[high] >= privo_key) --high;  // 从后向前找比privo_key小的值
+        data[low] = data[high];
+
+        while (low < high && data[low] <= privo_key) ++low;  // 从前向后找比provo_key大的值
+        data[high] = data[low];
+    }
+    data[low] = privo_key;
+    return low;
+}
+
+void Sorts::Qsort(std::vector<int>& data, int low, int high) {
+    if (low < high) {
+        int privot_loc = Partition(data, low, high);
+        Qsort(data, 0, privot_loc - 1);
+        Qsort(data, privot_loc + 1, high);
+    }
 }
