@@ -6,6 +6,12 @@
 class Sorts {
    public:
     /**
+     * 选择排序，
+     * 稳定排序，时间复杂度O(n^2)，数据量少的时候再用，不用额外的空间
+     */
+    void SelectSort(std::vector<int>& data);
+
+    /**
      * 稳定排序
      * 时间复杂度：正序时，最好O(n)，逆序时，最坏O(n^2)
      * */
@@ -40,9 +46,15 @@ class Sorts {
 
     /**
      * 归并排序，
-     * 稳定排序
+     * 稳定排序, 时间复杂度：O(nlogn)，但一般很少用其进行内部排序（因为需要额外空间？）
      */
     void MergeSort(std::vector<int>& data);
+
+    /**
+     * 堆排序
+     * 不稳定排序，时间复杂度最坏为O(nlogn)
+     */
+    void HeapSort(std::vector<int>& data);
 
    private:
     inline void SwapTwoNums(int& a, int& b) {
@@ -51,11 +63,16 @@ class Sorts {
         a = tmp;
     }
 
+    // 快排相关
     int Partition(std::vector<int>& data, int low, int high);
     void Qsort(std::vector<int>& data, int low, int high);
 
+    // 归并排序相关
     void MSort(std::vector<int>& data, int low, int high);
     void Merge(std::vector<int>& data, int low, int mid, int high);
+
+    // 堆排序相关
+    void HeapMaxModify(std::vector<int>& data, int start, int end);
 };
 
 #endif

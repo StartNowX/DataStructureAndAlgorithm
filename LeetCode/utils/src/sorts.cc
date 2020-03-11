@@ -2,6 +2,23 @@
 #include <iostream>
 #include <vector>
 
+void Sorts::SelectSort(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    for (int i = 0; i < data.size(); ++i) {
+        int min_index = i;
+        // 每次找出剩余未排序队列中的最小值
+        for (int j = i + 1; j < data.size(); ++j) {
+            if (data[j] < data[min_index]) {
+                min_index = j;
+            }
+        }
+        SwapTwoNums(data[i], data[min_index]);
+    }
+}
+
 void Sorts::InsertSort(std::vector<int>& data) {
     if (0 == data.size()) {
         return;
@@ -202,4 +219,49 @@ void Sorts::Merge(std::vector<int>& data, int low, int mid, int high) {
     // 将剩余元素归并
     while (i < num_l) data[k++] = data_l[i++];
     while (j < num_r) data[k++] = data_r[j++];
+}
+
+
+void Sorts::HeapSort(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    int len = data.size();
+    // 1. 构建大顶堆（从最后一个父节点开始，自下而上，从右到左），不构造大顶堆好像也可以？
+    for (int i = len / 2 - 1; i < len; --i) {
+        HeapMaxModify(data, i, len - 1);
+    }
+
+    // 2. 调整大顶堆，先将第一个元素和已经排序好的元素前一位交换，再重新调整至完成
+    for (int i = len - 1; i > 0; --i) {
+        // 将堆顶元素和末尾元素交换
+        SwapTwoNums(data[0], data[i]);
+        HeapMaxModify(data, 0, i - 1);
+    }
+}
+
+void Sorts::HeapMaxModify(std::vector<int>& data, int start, int end) {
+    if (0 == data.size()) {
+        return;
+    }
+
+    int parent = start;
+    int son_left = 2 * parent + 1;
+    while (son_left <= end) {
+        // 比较子节点，选择最大的
+        if (son_left + 1 < end && data[son_left] < data[son_left + 1]) {
+            son_left++;
+        }
+
+        // 父节点大于最大的子节点，排序完成
+        if (data[parent] > data[son_left]) {
+            return;
+        } else {
+            // 交换父节点和子节点，继续比较
+            SwapTwoNums(data[parent], data[son_left]);
+            parent = son_left;
+            son_left = parent * 2 + 1;
+        }
+    }
 }
