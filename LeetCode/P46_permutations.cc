@@ -43,10 +43,12 @@ class Solution {
             return;
         }
 
+        // i从0开始，而不是从index开始，如果从index开始的话，会导致很多tmp_num_vec长度不完整
         for (int i = 0; i < nums.size(); ++i) {
             if (!used_[i]) {
                 tmp_num_vec.emplace_back(nums[i]);
                 used_[i] = true;
+                // 继续添加下一个数字
                 CombinateNum(nums, index + 1, tmp_num_vec);
                 // 这里因为选样时是互斥的，一定要退出，区别于P17
                 tmp_num_vec.pop_back();
