@@ -90,6 +90,7 @@ class Solution {
             for (int j = 0; j < i; ++j) {
                 // 不需要像上面的代码想复杂了，因为对于i会和i前的所有元素比较，
                 // 而i前的两个元素之间的大小，因为是自底向下的，所以i前的两个元素之间其实已经比较过了，并将结果存放于对应的dp数组中了
+                // 区别于P152_max_product_subarray
                 if (nums[i] > nums[j]) {
                     dp[i] = std::max(dp[i], dp[j] + 1);
                 }
