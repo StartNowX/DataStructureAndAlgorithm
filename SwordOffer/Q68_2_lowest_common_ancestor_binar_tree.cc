@@ -10,6 +10,9 @@
 输出: 3
 解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
 
+
+所有节点的值都是唯一的。
+p、q 为不同节点且均存在于给定的二叉树中。
 */
 
 #include <iostream>
@@ -28,29 +31,36 @@ class Solution {
     // 递归的方式
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         // 全部再左子树
-        if (root->val > p->val && root->val > q->val) {
-            return lowestCommonAncestor(root->left, p, q);
-        } else if (root->val < p->val && root->val < q->val) {  // 全部再右子树
-            return lowestCommonAncestor(root->right, p, q);
-        } else {
-            return root;
-        }
+        RecursiveTree(root, p, q);
+        return res;
     }
 
-    TreeNode* lowestCommonAncestorIteration(TreeNode* root, TreeNode* p, TreeNode* q) {
-        TreeNode* p_head = root;
-        while (p_head != NULL) {
-            if (p_head->val > p->val && p_head->val > q->val) {
-                p_head = p_head->left;
-            } else if (p_head->val < p->val && p_head->val < q->val) {
-                p_head = p_head->right;
-            } else {
-                break;
-            }
+   private:
+    bool RecursiveTree(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (root == NULL) {
+            return false;
         }
 
-        return p_head;
+        // 左子树是否有找到
+        int left = RecursiveTree(root->left, p, q) ? 1 : 0;
+
+        // 右子树是否找到
+        int right = RecursiveTree(root->right, p, q) ? 1 : 0;
+
+        // 当前节点是否等于q或p中的一个
+        int mid = (root == p || root == q) ? 1 : 0;
+
+        // 因为所有节点的值都是唯一的，所以如果当前节点、左子树节点、右子树节点有两个为true，意味着找到了p和q的最近公共祖先
+        if (left + mid + right >= 2) {
+            res = root;
+            return true;
+        }
+        // 只要有一个找到了，都认为找到了一个
+        return (left + mid + right > 0);
     }
+
+   private:
+    TreeNode* res = NULL;
 };
 
 int main(int argc, char* argv[]) { return 0; }
