@@ -54,6 +54,8 @@ class Sorts {
      * 堆排序
      * 不稳定排序，时间复杂度最坏为O(nlogn)
      *
+     * c++的priority_queue底层是利用堆排序实现的
+     *
      * 关于堆的介绍：https://mp.weixin.qq.com/s/7GeO8jjg1QUG_ofJznOsCQ
      */
     void HeapSort(std::vector<int>& data);
@@ -62,6 +64,8 @@ class Sorts {
      * 基数排序
      * 稳定排序，时间复杂度最坏为O(n*k)，最好O(n*k)，空间复杂度O(n+k)
      * 用于整数排序，桶的个数为10，用于字符串排序，桶的个数为26
+     *
+     * 相似的有，桶排序、计数排序
      */
     void RadixSort(std::vector<int>& data);
 
