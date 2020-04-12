@@ -1,4 +1,5 @@
 #include "utils/include/sorts.h"
+
 #include <iostream>
 #include <vector>
 
@@ -229,6 +230,7 @@ void Sorts::HeapSort(std::vector<int>& data) {
 
     int len = data.size();
     // 1. 构建大顶堆（从最后一个父节点开始，自下而上，从右到左），不构造大顶堆好像也可以？
+    // 不构造堆也可以，因为在后续的排序中，其实是在一步步的堆化
     for (int i = len / 2 - 1; i < len; --i) {
         HeapMaxModify(data, i, len - 1);
     }
@@ -264,4 +266,50 @@ void Sorts::HeapMaxModify(std::vector<int>& data, int start, int end) {
             son_left = parent * 2 + 1;
         }
     }
+}
+
+void Sorts::RadixSort(std::vector<int>& data) {
+    const int kBuckets = 10;  // 整数比较，字符串比较时，为26个字母
+    std::vector<std::vector<int>> buckets(kBuckets);
+
+    // 最大的数的位数将表示循环的次数
+    int bit_len = MaxBits(data);
+    int radix = 1;
+    for (int i = 0; i < bit_len; ++i) {
+        // 将所有元素按【当前位】的数字放入不同的桶中
+        for (auto& ele : data) {
+            int k = ele / radix;
+            int q = k % kBuckets;
+            buckets[q].emplace_back(std::move(ele));
+        }
+
+        // 将【当前位】排序后的桶中的数字依次放入到原始数组中（从桶下方的元素开始放），一次排序完成
+        int idx = 0;
+        for (auto& bucket : buckets) {
+            for (auto& ele : bucket) {
+                data[idx++] = ele;
+            }
+            bucket.clear();
+        }
+
+        radix *= 10;
+    }
+}
+
+int Sorts::MaxBits(std::vector<int>& data) {
+    if (0 == data.size()) {
+        return 0;
+    }
+    const int kBuckets = 10;  // 整数比较，字符串比较时，为26个字母
+
+    int len = 0;
+    for (auto ele : data) {
+        int tmp_len = 0;
+        while (ele) {
+            ele /= kBuckets;
+            tmp_len++;
+        }
+        len = tmp_len >= len ? tmp_len : len;
+    }
+    return len;
 }

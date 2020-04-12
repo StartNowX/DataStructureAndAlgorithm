@@ -2,8 +2,8 @@
 #include <vector>
 
 #include "utils/include/sorts.h"
-#include "utils/include/utils.h"
 #include "utils/include/time_log.h"
+#include "utils/include/utils.h"
 
 using namespace std;
 
@@ -46,9 +46,14 @@ void SortExample(Utils<T>& util_int, Sorts& sort, std::vector<int>& input) {
         sort.MergeSort(input);
     }
 
-    if (true) {
+    if (false) {
         TimeLog log("HeapSort");
         sort.MergeSort(input);
+    }
+
+    if (true) {
+        TimeLog log("RadixSort");
+        sort.RadixSort(input);
     }
     util_int.PrintVector(input);
 }

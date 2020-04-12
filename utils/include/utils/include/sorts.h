@@ -53,8 +53,17 @@ class Sorts {
     /**
      * 堆排序
      * 不稳定排序，时间复杂度最坏为O(nlogn)
+     *
+     * 关于堆的介绍：https://mp.weixin.qq.com/s/7GeO8jjg1QUG_ofJznOsCQ
      */
     void HeapSort(std::vector<int>& data);
+
+    /**
+     * 基数排序
+     * 稳定排序，时间复杂度最坏为O(n*k)，最好O(n*k)，空间复杂度O(n+k)
+     * 用于整数排序，桶的个数为10，用于字符串排序，桶的个数为26
+     */
+    void RadixSort(std::vector<int>& data);
 
    private:
     inline void SwapTwoNums(int& a, int& b) {
@@ -73,6 +82,9 @@ class Sorts {
 
     // 堆排序相关
     void HeapMaxModify(std::vector<int>& data, int start, int end);
+
+    // 基数排序相关
+    int MaxBits(std::vector<int>& data);
 };
 
 #endif
