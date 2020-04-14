@@ -12,6 +12,8 @@
  *     TreeNode *right;
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
+ *
+ * 和LeetCode题库中的P105一样，P105_construct_btree_with_preorder_inorder.cc
  */
 
 #include <iostream>

@@ -50,7 +50,8 @@ class Solution {
         }
 
         TreeNode* p_head = root;
-        InsertSubBst(p_head, val);
+        // InsertSubBst(p_head, val);
+        InsertSubBstIter(p_head, val);
         return p_head;
     }
 
@@ -72,6 +73,30 @@ class Solution {
             InsertSubBst(root->left, val);
         } else {
             InsertSubBst(root->right, val);
+        }
+        return;
+    }
+
+    void InsertSubBstIter(TreeNode* root, int val) {
+        TreeNode* tmp = new TreeNode(val);
+        while (root != NULL) {
+            // 插入左子树
+            if (root->val > val) {
+                if (root->left == NULL) {
+                    root->left = tmp;
+                    return;
+                } else {
+                    root = root->left;
+                }
+            } else {
+                //插入右子树
+                if (root->right == NULL) {
+                    root->right = tmp;
+                    return;
+                } else {
+                    root = root->right;
+                }
+            }
         }
         return;
     }
