@@ -30,6 +30,32 @@ class Solution {
     }
 
    private:
+    // 利用线索二叉树
+    void MariosTraversal(TreeNode* root) {
+        if (root == NULL) {
+            return;
+        }
+
+        TreeNode* p_head = root;
+        TreeNode* pre_node;
+        while (p_head) {
+            if (p_head->left == NULL) {
+                res_.emplace_back(p_head->val);
+                p_head = p_head->right;
+            } else {
+                pre_node = p_head->left;
+                while (pre_node->right) {
+                    pre_node = pre_node->right;
+                }
+                // 根节点的左子树的最右子树的右节点的后续节点是根节点
+                pre_node->right = p_head;
+                TreeNode* tmp = p_head;
+                p_head = p_head->left;  // 继续找左子树
+                tmp->left = NULL;       //原根节点要置为NULL，防止死循环
+            }
+        }
+    }
+
     void InOrderTraversalIter(TreeNode* p_head) {
         if (p_head == NULL) {
             return;
