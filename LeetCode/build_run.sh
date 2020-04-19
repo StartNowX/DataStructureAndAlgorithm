@@ -6,7 +6,7 @@ then
     exit 0
 fi
 
-g++ $filename utils/src/*.cc -std=c++11 -I./ 
+g++ $filename ../utils/src/*.cc -std=c++11 -I../utils/include
 
 if [ ! -f "a.out" ];
 then

@@ -10,7 +10,7 @@ Your algorithm should run in O(n2) complexity.
 
 Follow up: Could you improve it to O(n log n) time complexit
 
- */
+*/
 
 #include <iostream>
 #include <vector>
@@ -98,6 +98,31 @@ class Solution {
         }
 
         return max_vec_element(dp);
+    }
+
+    // rewrite
+    int lengthOfLIS_DP_2nd(vector<int>& nums) {
+        int len = static_cast<int>(nums.size());
+        if (len == 0) {
+            return 0;
+        }
+
+        vector<int> dp(len, 0);
+
+        for (int i = 0; i < len; ++i) {
+            dp[i] = 1;
+            for (int j = 0; j < i; ++j) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = std::max(dp[i], dp[j] + 1);
+                }
+            }
+        }
+
+        int max_value = 0;
+        for (auto x : dp) {
+            max_value = std::max(max_value, x);
+        }
+        return max_value;
     }
 
    private:

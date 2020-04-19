@@ -32,10 +32,11 @@ class Solution {
             return 0;
         }
         // 这里只需要O(n)的空间即可，因为每行只能取一个数
-        // dp最大长度==triangle底边长度
+        // dp最大长度==triangle底边长度，这里优化空间，dp[n]表示该行的所有n个元素的最小距离，最终的最小距离是dp中的最小值
         vector<int> dp(rows, 0);
         dp[0] = triangle[0][0];
         // pre_val: dp[i-1][j-1], cur: dp[i-1][j]
+        // 假如dp为2维的，dp[i][j] = dp[i-1][j-1] + dp[i-1][j]
         int pre_val = 0, cur;
         for (int i = 1; i < rows; ++i) {
             for (int c = 0; c <= i; ++c) {
@@ -76,6 +77,8 @@ class Solution {
 
         return dp[rows-1];*/
     }
+
+    int minimumTotal(vector<vector<int>>& triangle) {}
 };
 
 int main(int argc, char* argv[]) { return 0; }
