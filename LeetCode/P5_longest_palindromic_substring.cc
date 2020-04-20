@@ -17,6 +17,7 @@ using namespace std;
 
 class Solution {
    public:
+    // 注意和题目516（最长回文子序列）区分，这里不是子序列，是子串
     string longestPalindrome(string s) {
         if (s.length() <= 0) {
             return "";
@@ -50,6 +51,7 @@ class Solution {
             L--;
             R++;
         }
+        // 注意这里是-1，因为while循环退出时，L和R都变化了一次，相当于(R-1)-(L+1)-1=R-L-1
         return R - L - 1;
     }
 };
