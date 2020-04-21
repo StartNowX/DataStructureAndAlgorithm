@@ -55,6 +55,10 @@
     * 664
     * 312
 
+#### 背包DP
+1. 416，[分割等和子集](./LeetCode/P416_partition_equal_subset_sum.cc)
+    * 将问题转换为01背包问题
+
 
 #### 计数型DP
 1. [62-不同路径](./LeetCode/P62_unique_paths.cc)
