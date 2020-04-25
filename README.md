@@ -56,6 +56,13 @@
     * 312
 
 
+#### 背包DP
+1. 322，[322-零钱兑换](./LeetCode/P322_coin_change.cc)
+    * 完全背包，注意DP数组表示组成金额i所需要的最小硬币数
+2. 518，[518-零钱兑换2](./LeetCode/P518_coin_change.cc)
+    * 完全背包，求方案数
+
+
 #### 计数型DP
 1. [62-不同路径](./LeetCode/P62_unique_paths.cc)
     * 可以将空间复杂度优化到O(n)
