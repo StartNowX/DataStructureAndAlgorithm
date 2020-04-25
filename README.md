@@ -55,6 +55,10 @@
     * 664
     * 312
 
+#### 背包DP
+1. 416，[分割等和子集](./LeetCode/P416_partition_equal_subset_sum.cc)
+    * 将问题转换为01背包问题
+
 
 #### 背包DP
 1. 322，[322-零钱兑换](./LeetCode/P322_coin_change.cc)
