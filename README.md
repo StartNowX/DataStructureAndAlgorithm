@@ -57,8 +57,11 @@
     * 312
 
 #### 背包DP
-1. 416，[分割等和子集](./LeetCode/P416_partition_equal_subset_sum.cc)
+1. 416，[416-分割等和子集](./LeetCode/P416_partition_equal_subset_sum.cc)
     * 将问题转换为01背包问题
+2. 494，[494-目标和](./LeetCode/P494_target_sum.cc)
+    * 递归方法
+    * 01背包问题，动态规划，同时还可以动态规划时进行状态空间压缩
 
 
 #### 背包DP

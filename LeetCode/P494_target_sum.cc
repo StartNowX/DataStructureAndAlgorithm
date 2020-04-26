@@ -51,6 +51,36 @@ class Solution {
         return S > 1000 ? 0 : dp[nums.size() - 1][S + 1000];
     }
 
+
+    int findTargetSumWaysDPSuppress(vector<int>& nums, int S) {
+        if (nums.size() == 0 && S != 0) {
+            return 0;
+        }
+        if (nums.size() == 0) {
+            return 0;
+        }
+
+        // 数组和不超过1000，因此正负总共2001个元素
+        vector<int> dp(2001, 0);
+        dp[nums[0] + 1000] = 1;
+        dp[-nums[0] + 1000] += 1;
+
+
+        for (int i = 1; i < nums.size(); ++i) {
+            // 当前总和从-1000开始，最小值
+            vector<int> next(2001, 0);
+            for (int j = -1000; j <= 1000; ++j) {
+                if (dp[j + 1000] > 0) {
+                    next[j + nums[i] + 1000] += dp[j + 1000];
+                    next[j - nums[i] + 1000] += dp[j + 1000];
+                }
+            }
+            dp = next;
+        }
+
+        return S > 1000 ? 0 : dp[S + 1000];
+    }
+
     int findTargetSumWaysRecursive(vector<int>& nums, int S) {
         if (nums.size() == 0 && S != 0) {
             return 0;
@@ -87,7 +117,7 @@ int main(int argc, char* argv[]) {
     int S = 3;
 
     Solution sln;
-    auto res = sln.findTargetSumWaysDP(nums, S);
+    auto res = sln.findTargetSumWaysDPSuppress(nums, S);
     std::cout << "res = " << res << std::endl;
 
     return 0;
