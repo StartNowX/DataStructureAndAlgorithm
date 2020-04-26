@@ -77,6 +77,23 @@ class Solution {
     //         return -1;
     //     }
     // }
+
+    int coinChange2nd(vector<int>& coins, int amount) {
+        if (coins.size() == 0) {
+            return -1;
+        }
+
+        std::vector<int> dp(amount + 1, amount + 1);
+        dp[0] = 0;
+        for (int i = 1; i < amount + 1; ++i) {
+            for (int j = 0; j < coins.size(); ++j) {
+                if (coins[j] <= i) {
+                    dp[i] = std::min(dp[i], dp[i - coins[j]] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
+    }
 };
 
 int main(int argc, char* argv[]) {
@@ -84,6 +101,6 @@ int main(int argc, char* argv[]) {
     int amount = 27;
 
     Solution sln;
-    auto res = sln.coinChange(vec, amount);
+    auto res = sln.coinChange2nd(vec, amount);
     cout << "res = " << res << std::endl;
 }
