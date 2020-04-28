@@ -2,7 +2,7 @@
  * Given a positive integer n, find the least number of perfect square numbers  which sum
 to n.
     Input: n = 12
-    Output: 3 
+    Output: 3
     Explanation: 12 = 4 + 4 + 4.
 
     Input: n = 13
@@ -10,9 +10,10 @@ to n.
     Explanation: 13 = 4 + 9.
 */
 
+#include <limits.h>
+
 #include <iostream>
 #include <vector>
-#include <limits.h>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ class Solution {
         // dp[i]表示i能够被分解的最少平方数的个数
         vector<int> dp(n + 1, 0);
 
-// 不能从0开始遍历,
+        // 不能从0开始遍历,
         for (int i = 1; i <= n; ++i) {
             int min_cnt = INT_MAX;
             for (int j = 1; j * j <= i; ++j) {
@@ -35,9 +36,10 @@ class Solution {
 
         return dp[n];
     }
-    
+
     // 另一种方法
-    // 四平方定理： 任何一个正整数都可以表示成不超过四个整数的平方之和。 推论：满足四数平方和定理的数n（四个整数的情况），必定满足 n=4^a(8b+7)
+    // 四平方定理： 任何一个正整数都可以表示成不超过四个整数的平方之和。
+    // 推论：满足四数平方和定理的数n（四个整数的情况），必定满足 n=4^a(8b+7)
 };
 
 

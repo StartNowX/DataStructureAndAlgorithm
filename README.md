@@ -62,12 +62,9 @@
 2. 494，[494-目标和](./LeetCode/P494_target_sum.cc)
     * 递归方法
     * 01背包问题，动态规划，同时还可以动态规划时进行状态空间压缩
-
-
-#### 背包DP
-1. 322，[322-零钱兑换](./LeetCode/P322_coin_change.cc)
+2. 322，[322-零钱兑换](./LeetCode/P322_coin_change.cc)
     * 完全背包，注意DP数组表示组成金额i所需要的最小硬币数
-2. 518，[518-零钱兑换2](./LeetCode/P518_coin_change.cc)
+3. 518，[518-零钱兑换2](./LeetCode/P518_coin_change.cc)
     * 完全背包，求方案数
 
 
@@ -78,3 +75,4 @@
     * 多了一个障碍物信息
 3. [96-不同的二叉搜索树](./LeetCode/P96_different_binary_search_tree.cc)
     * 卡特兰数
+4. [279-最少完美平方数](./LeetCode/P279_perfect_squares.cc)
