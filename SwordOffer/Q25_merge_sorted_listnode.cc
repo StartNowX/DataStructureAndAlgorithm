@@ -5,6 +5,8 @@
  * 输出：1->1->2->3->4->4
  */
 
+  // 同LeetCode中Q21_merge_sorted_lists.cc
+
 #include <iostream>
 
 using namespace std;
