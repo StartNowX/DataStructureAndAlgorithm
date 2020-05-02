@@ -70,6 +70,25 @@ class Solution {
         return max_len;
     }
 
+    int lengthOfLongestSubstring0205(string s) {
+        int len = s.length();
+        if (0 == len) {
+            return 0;
+        }
+
+        std::unordered_set<char> map;
+        int start = 0, max_len = 0;
+        for (int i = 0; i < len; ++i) {
+            while (map.find(s[i]) != map.end()) {
+                map.erase(s[start]);
+                start++;
+            }
+            max_len = std::max(max_len, i - start + 1);
+            map.insert(s[i]);
+        }
+        return max_len;
+    }
+
     int lengthOfLongestSubstringWrong(string s) {
         int len = s.length();
 
