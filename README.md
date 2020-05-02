@@ -86,8 +86,25 @@
     * 卡特兰数
 4. [279-最少完美平方数](./LeetCode/P279_perfect_squares.cc)
 
-## 每日一题
 
+## 滑动窗系列
+1. 3，[3-最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc)
+2. 209, [209-长度最小的子数组](./LeetCode/P209_min_seq_sum_len.cc)
+    * 注意和第3题中在计算滑动窗长度时的区别
+    * [python版本](./LeetCode/P209_min_seq_sum_len.py)
+        * 用了List, `from typing import List`
+3. 567, [567-字符串的排列](./LeetCode/P567_permutation_in_string.cc)
+    * [python版本](./LeetCode/P567_permutation_in_string.py)
+        * 用了defaultdict, `from collections import defaultdict`
+4. `困难系列`
+    * 30， 串联所有单词的子串
+    * 76，最小覆盖子串
+    * 159， 至多包含两个不同字符的最长子串
+    * 239，滑动窗口最大值
+    * 632， 最小区间
+    * 727，最小窗口子序列
+
+## 每日一题
 #### May
 1. 2020-05-01：[合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
 2. 2020-05-02: [最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc), [python版本](./LeetCode/P3_longest_substr_without_repeating.py)
