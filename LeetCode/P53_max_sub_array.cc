@@ -12,21 +12,65 @@
 
 using namespace std;
 
-int MaxSubArray(vector<int>& nums) {
-    int sum = nums[0];
-    int max = nums[0];
-    // 联机算法：是在任意时刻算法对要操作的数据只读入（扫描）一次，一旦被读入并处理，它就不需要在被记忆了。而在此处理过程中算法能对它已经读入的数据立即给出相应子序列问题的正确答案
-    for(int i = 1; i < nums.size(); ++i) {
-        // 如果sum小于0，则其对后续的求和是负增益的
-        if(sum < 0) {
-            sum = 0;
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int len = static_cast<int>(nums.size());
+
+        if (0 == len) {
+            return 0;
         }
-        sum += nums[i];
-        max = max < sum ? sum : max;    
+
+        vector<int> dp(len, INT32_MIN);
+        dp[0] = nums[0];
+        for (int i = 1; i < len; ++i) {
+            dp[i] = std::max(nums[i], dp[i-1] + nums[i]);
+        }
+
+        int max_value = dp[0];
+        for (auto x : dp) {
+            max_value = std::max(x, max_value);
+        }
+
+        return max_value;
     }
 
-    return max;
-}
+    int maxSubArray0503(vector<int>& nums) {
+        int len = nums.size();
+        if (0 == len) {
+            return 0;
+        }
+
+        vector<int> dp(len, INT32_MIN);
+        dp[0] = nums[0];
+        for (int i = 1; i < len; ++i) {
+            dp[i] = std::max(nums[i], dp[i - 1] + nums[i]);
+        }
+
+        int max_sum = dp[0];
+        for (auto ele : dp) {
+            max_sum = std::max(max_sum, ele);
+        }
+
+        return max_sum;
+    }
+    
+    int MaxSubArray(vector<int>& nums) {
+        int sum = nums[0];
+        int max = nums[0];
+        // 联机算法：是在任意时刻算法对要操作的数据只读入（扫描）一次，一旦被读入并处理，它就不需要在被记忆了。而在此处理过程中算法能对它已经读入的数据立即给出相应子序列问题的正确答案
+        for(int i = 1; i < nums.size(); ++i) {
+            // 如果sum小于0，则其对后续的求和是负增益的
+            if(sum < 0) {
+                sum = 0;
+            }
+            sum += nums[i];
+            max = max < sum ? sum : max;    
+        }
+
+        return max;
+    }
+};
 
 int MaxSubArrayDP(vector<int>& nums) {
     int result = INT_MIN, f = 0;
