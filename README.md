@@ -104,6 +104,13 @@
     * 632， 最小区间
     * 727，最小窗口子序列
 
+## 贪心算法
+1. 55, [55-跳跃游戏](./LeetCode/P55_jump_game.cc)
+    * [python版本](./LeetCode/P55_jump_game.py)
+2. 45, [45-跳跃游戏2](./LeetCode/P45_jump_game2.cc)
+    * [python版本](./LeetCode/P45_jump_game2.py)
+    * 注意，用dp的话会超时
+
 ## 每日一题
 #### May
 1. 2020-05-01：[合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
