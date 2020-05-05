@@ -113,5 +113,8 @@
 
 ## 每日一题
 #### May
-1. 2020-05-01：[合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
-2. 2020-05-02: [最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc), [python版本](./LeetCode/P3_longest_substr_without_repeating.py)
+1. 2020-05-01: [合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
+2. 2020-05-02: [最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc)，[python版本](./LeetCode/P3_longest_substr_without_repeating.py)
+3. 2020-05-03: [最大子序列和]((./LeetCode/P53_max_sub_array.cc))， [python版本]((./LeetCode/P53_max_sub_array.py)
+4. 2020-05-04: [跳跃游戏2](./LeetCode/P45_jump_game2.cc)，[python版本](./LeetCode/P45_jump_game2.py)
+5. 2020-05-05: [验证二叉搜索树](./LeetCode/P98_validate_bst.cc)，[python版本](./LeetCode/P98_validate_bst.py)
