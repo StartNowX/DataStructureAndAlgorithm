@@ -118,3 +118,4 @@
 3. 2020-05-03: [最大子序列和]((./LeetCode/P53_max_sub_array.cc))， [python版本]((./LeetCode/P53_max_sub_array.py)
 4. 2020-05-04: [跳跃游戏2](./LeetCode/P45_jump_game2.cc)，[python版本](./LeetCode/P45_jump_game2.py)
 5. 2020-05-05: [验证二叉搜索树](./LeetCode/P98_validate_bst.cc)，[python版本](./LeetCode/P98_validate_bst.py)
+6. 2020-05-06: [最低票价](./LeetCode/P983_min_cost_for_tickets.cc)，[python版本](./LeetCode/P983_min_cost_for_tickets.py)
