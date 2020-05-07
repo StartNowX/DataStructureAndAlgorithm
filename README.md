@@ -119,3 +119,4 @@
 4. 2020-05-04: [跳跃游戏2](./LeetCode/P45_jump_game2.cc)，[python版本](./LeetCode/P45_jump_game2.py)
 5. 2020-05-05: [验证二叉搜索树](./LeetCode/P98_validate_bst.cc)，[python版本](./LeetCode/P98_validate_bst.py)
 6. 2020-05-06: [最低票价](./LeetCode/P983_min_cost_for_tickets.cc)，[python版本](./LeetCode/P983_min_cost_for_tickets.py)
+7. 2020-05-07: [另一个树的子树](./LeetCode/P572_Subtree_of_another_tree.cc)，[python版本](./LeetCode/P572_Subtree_of_another_tree.py)
