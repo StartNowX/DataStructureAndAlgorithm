@@ -111,12 +111,16 @@
     * [python版本](./LeetCode/P45_jump_game2.py)
     * 注意，用dp的话会超时
 
+## 其他
+1. 9，[9-回文数字](./LeetCode/P9_palindrome_number.cc)
+
 ## 每日一题
 #### May
-1. 2020-05-01: [合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
-2. 2020-05-02: [最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc)，[python版本](./LeetCode/P3_longest_substr_without_repeating.py)
-3. 2020-05-03: [最大子序列和]((./LeetCode/P53_max_sub_array.cc))， [python版本]((./LeetCode/P53_max_sub_array.py)
-4. 2020-05-04: [跳跃游戏2](./LeetCode/P45_jump_game2.cc)，[python版本](./LeetCode/P45_jump_game2.py)
-5. 2020-05-05: [验证二叉搜索树](./LeetCode/P98_validate_bst.cc)，[python版本](./LeetCode/P98_validate_bst.py)
-6. 2020-05-06: [最低票价](./LeetCode/P983_min_cost_for_tickets.cc)，[python版本](./LeetCode/P983_min_cost_for_tickets.py)
-7. 2020-05-07: [另一个树的子树](./LeetCode/P572_Subtree_of_another_tree.cc)，[python版本](./LeetCode/P572_Subtree_of_another_tree.py)
+1. 2020-05-01: [21-合并两个有序的链表](./LeetCode/P21_merge_two_sorted_lists.cc)，[python版本](./LeetCode/P21_merge_two_sorted_list.py)
+2. 2020-05-02: [3-最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc)，[python版本](./LeetCode/P3_longest_substr_without_repeating.py)
+3. 2020-05-03: [53-最大子序列和]((./LeetCode/P53_max_sub_array.cc))， [python版本]((./LeetCode/P53_max_sub_array.py)
+4. 2020-05-04: [45-跳跃游戏2](./LeetCode/P45_jump_game2.cc)，[python版本](./LeetCode/P45_jump_game2.py)
+5. 2020-05-05: [98-验证二叉搜索树](./LeetCode/P98_validate_bst.cc)，[python版本](./LeetCode/P98_validate_bst.py)
+6. 2020-05-06: [983-最低票价](./LeetCode/P983_min_cost_for_tickets.cc)，[python版本](./LeetCode/P983_min_cost_for_tickets.py)
+7. 2020-05-07: [572-另一个树的子树](./LeetCode/P572_Subtree_of_another_tree.cc)，[python版本](./LeetCode/P572_Subtree_of_another_tree.py)
+8. 2020-05-08: [221-最大方形](./LeetCode/P221_maximal_square.cc)，[python版本](./LeetCode/P221_maximal_square.py)
