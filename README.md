@@ -124,3 +124,4 @@
 6. 2020-05-06: [983-最低票价](./LeetCode/P983_min_cost_for_tickets.cc)，[python版本](./LeetCode/P983_min_cost_for_tickets.py)
 7. 2020-05-07: [572-另一个树的子树](./LeetCode/P572_Subtree_of_another_tree.cc)，[python版本](./LeetCode/P572_Subtree_of_another_tree.py)
 8. 2020-05-08: [221-最大方形](./LeetCode/P221_maximal_square.cc)，[python版本](./LeetCode/P221_maximal_square.py)
+9. 2020-05-09: [9-求平方根](./LeetCode/P69_sqrt.cc)
