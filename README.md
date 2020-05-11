@@ -126,3 +126,4 @@
 8. 2020-05-08: [221-最大方形](./LeetCode/P221_maximal_square.cc)，[python版本](./LeetCode/P221_maximal_square.py)
 9. 2020-05-09: [9-求平方根](./LeetCode/P69_sqrt.cc)
 10. 2020-05-10: [263-最近公共祖先](./LeetCode/P236_lowest_common_ancestor_of_a_binary_tree.cc)，[python版本](./LeetCode/P236_lowest_common_ancestor_of_a_binary_tree.py)
+11. 2020-05-11: [50-求幂](./LeetCode/P50_power.cc)，[python版本](./LeetCode/P50_power.py)
