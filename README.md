@@ -127,3 +127,5 @@
 9. 2020-05-09: [9-求平方根](./LeetCode/P69_sqrt.cc)
 10. 2020-05-10: [263-最近公共祖先](./LeetCode/P236_lowest_common_ancestor_of_a_binary_tree.cc)，[python版本](./LeetCode/P236_lowest_common_ancestor_of_a_binary_tree.py)
 11. 2020-05-11: [50-求幂](./LeetCode/P50_power.cc)，[python版本](./LeetCode/P50_power.py)
+12. 2020-05-15: [560-子数组和等于k的个数](./LeetCode/P560_subarray_sum_equals_k.cc)，[python版本](./LeetCode/P560_subarray_sum_equals_k.py)
+13. 2020-05-16: [25-按k组翻转链表](./LeetCode/P25_reverse_nodes_in_k-group.cc)
