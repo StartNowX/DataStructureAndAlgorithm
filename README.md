@@ -130,3 +130,4 @@
 12. 2020-05-15: [560-子数组和等于k的个数](./LeetCode/P560_subarray_sum_equals_k.cc)，[python版本](./LeetCode/P560_subarray_sum_equals_k.py)
 13. 2020-05-16: [25-按k组翻转链表](./LeetCode/P25_reverse_nodes_in_k-group.cc)
 14. 2020-05-17: [210-课程表2](./LeetCode/P210_course_schedule2.cc)，[python版本](./LeetCode/P210_course_schedule2.py)
+15. 2020-05-18: [152-最大子数组乘积](./LeetCode/P152_max_product_subarray.cc)，[python版本](./LeetCode/P152_max_product_subarray.py)
