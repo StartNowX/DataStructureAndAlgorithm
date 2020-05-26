@@ -132,4 +132,6 @@
 14. 2020-05-17: [210-课程表2](./LeetCode/P210_course_schedule2.cc)，[python版本](./LeetCode/P210_course_schedule2.py)
 15. 2020-05-18: [152-最大子数组乘积](./LeetCode/P152_max_product_subarray.cc)，[python版本](./LeetCode/P152_max_product_subarray.py)
 16. 2020-05-19: [152-最大子数组乘积](./LeetCode/P680_valid_palindrome2.cc)
-17. 2020-05022: [150-用前序遍历和后续遍历构造二叉树](./LeetCode/P105_construct_btree_with_preorder_inorder.cc)
+17. 2020-05-22: [150-用前序遍历和后续遍历构造二叉树](./LeetCode/P105_construct_btree_with_preorder_inorder.cc)
+19. 2020-05-24: [4-找排序数组中的中位数](./LeetCode/P4_find_median_in_sorted_array.cc)
+19. 2020-05-26: [287-找重复数](./LeetCode/P287_find_duplicate_num.cc)
