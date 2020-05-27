@@ -10,6 +10,10 @@ The range of numbers in the array is [-1000, 1000] and the range of the integer 
 
 */
 
+/**
+ * 和974思想一样
+ */
+
 #include <iostream>
 #include <unordered_map>
 #include <vector>

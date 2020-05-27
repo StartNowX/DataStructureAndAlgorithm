@@ -111,6 +111,10 @@
     * [python版本](./LeetCode/P45_jump_game2.py)
     * 注意，用dp的话会超时
 
+## 前缀和
+1. 560，[560-子数组和等于k的个数](./LeetCode/P560_subarray_sum_equals_k.cc)，[python版本](./LeetCode/P560_subarray_sum_equals_k.py)
+2. 974，[974-和能被K整除的子数组个数](./LeetCode/P974_subarray_sums_divisible_by_K.cc)
+
 ## 其他
 1. 9，[9-回文数字](./LeetCode/P9_palindrome_number.cc)
 
@@ -135,3 +139,5 @@
 17. 2020-05-22: [150-用前序遍历和后续遍历构造二叉树](./LeetCode/P105_construct_btree_with_preorder_inorder.cc)
 19. 2020-05-24: [4-找排序数组中的中位数](./LeetCode/P4_find_median_in_sorted_array.cc)
 19. 2020-05-26: [287-找重复数](./LeetCode/P287_find_duplicate_num.cc)
+20. 2020-05-27: [974-和能被K整除的子数组个数](./LeetCode/P974_subarray_sums_divisible_by_K.cc)
+    * 和560思想一样
