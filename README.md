@@ -141,3 +141,5 @@
 19. 2020-05-26: [287-找重复数](./LeetCode/P287_find_duplicate_num.cc)
 20. 2020-05-27: [974-和能被K整除的子数组个数](./LeetCode/P974_subarray_sums_divisible_by_K.cc)
     * 和560思想一样
+21. 2020-05-28: [394-字符串解码](./LeetCode/P394_decode_string.cc)
+22. 2020-05-29: [198-打家劫舍](./LeetCode/P198_robber_house.cc)
