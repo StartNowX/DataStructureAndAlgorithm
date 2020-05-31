@@ -115,6 +115,14 @@
 1. 560，[560-子数组和等于k的个数](./LeetCode/P560_subarray_sum_equals_k.cc)，[python版本](./LeetCode/P560_subarray_sum_equals_k.py)
 2. 974，[974-和能被K整除的子数组个数](./LeetCode/P974_subarray_sums_divisible_by_K.cc)
 
+## DFS
+1. 100, [100-相同二叉树](./LeetCode/P100_same_tree.cc)
+2. 100, [101-对称二叉树](./LeetCode/P101_symmetric_tree.cc)
+3. 108, [108-将排序数组转为二叉搜索树](./LeetCode/P108_convert_sorted_array_bst.cc)
+4. 110, [110-平衡二叉树](./LeetCode/P110_balanced_binary_tree.cc)
+5. 111, [111-二叉树最小高度](./LeetCode/P111_minimum_depth_binary_tree.cc)
+6. 112, [112-路径和](./LeetCode/P112_path_sum.cc)
+
 ## 其他
 1. 9，[9-回文数字](./LeetCode/P9_palindrome_number.cc)
 
