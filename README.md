@@ -86,6 +86,9 @@
     * 卡特兰数
 4. [279-最少完美平方数](./LeetCode/P279_perfect_squares.cc)
 
+#### 其他
+1. [837-新21点游戏](./LeetCode/P837_new21games.cc)
+
 
 ## 滑动窗系列
 1. 3，[3-最长无重复子串](./LeetCode/P3_longest_substr_without_repeating.cc)
@@ -152,3 +155,8 @@
 21. 2020-05-28: [394-字符串解码](./LeetCode/P394_decode_string.cc)
 22. 2020-05-29: [198-打家劫舍](./LeetCode/P198_robber_house.cc)
 23. 2020-05-31: [101-对称二叉树](./LeetCode/P101_symmetric_tree.cc)
+
+#### June
+1. 2020-06-01: [1431-孩子可以分到的最大糖果数](./LeetCode/P1431_kids_with_the_greatest_number_of_candies.cc)
+2. 2020-06-02: [64-不用乘除和控制语句实现加和](./LeetCode/PE64_sum_without_multi_division.cc)
+3. 2020-06-03: [837-新21点游戏](./LeetCode/P837_new21games.cc)
