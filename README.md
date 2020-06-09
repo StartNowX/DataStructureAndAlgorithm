@@ -34,6 +34,7 @@
 8. 打家劫舍系列
     * 198，[98-打家劫舍1](./LeetCode/P198_robber_house.cc)，主要注意不能相邻，所以dp通项为`dp[i] = max(dp[i-2] + num[i], dp[i-1])`
     * 213，[213-打家劫舍2](./LeetCode/P213_robber_house2.cc)，在1的基础上增加了最后一户和倒数第一户是相邻的，可以分解为不考虑第一户的打家劫舍1和不考虑最后一户的打家劫舍1，最后求两者之间的最大值
+    * 面试题46，[46-将数字转为字符串](./LeetCode/PE46_translation_num_to_string.cc)
 9. 股票系列
     * 120，[121-买卖股票的最佳时机](./LeetCode/P121_best_to_operator_stock.cc)
     * 121，[122-买卖股票的最佳时机](./LeetCode/P122_best_to_operator_stock2.cc)
@@ -161,3 +162,6 @@
 2. 2020-06-02: [64-不用乘除和控制语句实现加和](./LeetCode/PE64_sum_without_multi_division.cc)
 3. 2020-06-03: [837-新21点游戏](./LeetCode/P837_new21games.cc)
 4. 2020-06-04: [238-数组除自身元素外的乘积](./LeetCode/P238_product_of_array_except_self.cc)
+5. 2020-06-05: [29-顺时针打印矩阵](./LeetCode/PE29_spiral_matrix.cc)
+6. 2020-06-07: [128-最长连续序列](./LeetCode/P128_longest_consecutive_seq.cc)
+7. 2020-06-09: [46-将数字转为字符串](./LeetCode/PE46_translation_num_to_string.cc)
