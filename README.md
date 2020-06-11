@@ -165,3 +165,5 @@
 5. 2020-06-05: [29-顺时针打印矩阵](./LeetCode/PE29_spiral_matrix.cc)
 6. 2020-06-07: [128-最长连续序列](./LeetCode/P128_longest_consecutive_seq.cc)
 7. 2020-06-09: [46-将数字转为字符串](./LeetCode/PE46_translation_num_to_string.cc)
+8. 2020-06-10: [9-回文数](./LeetCode/P9_palindrome_number.cc)
+9. 2020-06-11: [11-每日温度](./LeetCode/P739_daily_temperatures.cc)
